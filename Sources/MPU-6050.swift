@@ -26,7 +26,7 @@
 import SwiftyGPIO  //Comment this when not using the package manager
 
 
-public class MPU-6050{
+public class MPU6050{
     var i2c: I2CInterface
     let address: Int
 

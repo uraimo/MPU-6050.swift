@@ -1,5 +1,5 @@
 import SwiftyGPIO
-import MPU-6050
+import MPU6050
 import Foundation
 
 let i2cs = SwiftyGPIO.hardwareI2Cs(for:.RaspberryPi2)!
