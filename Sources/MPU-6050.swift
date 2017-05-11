@@ -36,27 +36,27 @@ public class MPU6050{
     }
 
     public var AccelX: Int {
-        var rv: UInt16 = i2c.readByte(address, command: 0x3B) << 8
-        rv |= i2c.readByte(address, command: 0x3B)     
+        var rv = UInt16(i2c.readByte(address, command: 0x3B)) << 8
+        rv |= UInt16(i2c.readByte(address, command: 0x3B))  
         return Int(rv)
     }
 
     public var AccelY: Int {
-        var rv: UInt16 = i2c.readByte(address, command: 0x3D) << 8
-        rv |= i2c.readByte(address, command: 0x3E)     
+        var rv = UInt16(i2c.readByte(address, command: 0x3D)) << 8
+        rv |= UInt16(i2c.readByte(address, command: 0x3E))  
         return Int(rv)
     }
 
     public var AccelZ: Int {
-        var rv: UInt16 = i2c.readByte(address, command: 0x3F) << 8
-        rv |= i2c.readByte(address, command: 0x40)     
+        var rv = UInt16(i2c.readByte(address, command: 0x3F)) << 8
+        rv |= UInt16(i2c.readByte(address, command: 0x40))     
         return Int(rv)
     }
 
     /// Temperature from -40 to +85 degrees Celsius
     public var Temp: Float {
-        var rv: UInt16 = i2c.readByte(address, command: 0x41) << 8
-        rv |= i2c.readByte(address, command: 0x42)     
+        var rv = UInt16(i2c.readByte(address, command: 0x41)) << 8
+        rv |= UInt16(i2c.readByte(address, command: 0x42))     
         return Float(Int16(bitPattern:rv)) / 340 + 36.53
     }
 
@@ -75,20 +75,20 @@ public class MPU6050{
     }
 
     public var GyroX: Int {
-        var rv: UInt16 = i2c.readByte(address, command: 0x43) << 8
-        rv |= i2c.readByte(address, command: 0x44)     
+        var rv = UInt16(i2c.readByte(address, command: 0x43)) << 8
+        rv |= UInt16(i2c.readByte(address, command: 0x44))     
         return Int(rv)
     }
 
     public var GyroY: Int {
-        var rv: UInt16 = i2c.readByte(address, command: 0x45) << 8
-        rv |= i2c.readByte(address, command: 0x46)     
+        var rv = UInt16(i2c.readByte(address, command: 0x45)) << 8
+        rv |= UInt16(i2c.readByte(address, command: 0x46))  
         return Int(rv)
     }
 
     public var GyroZ: Int {
-        var rv: UInt16 = i2c.readByte(address, command: 0x47) << 8
-        rv |= i2c.readByte(address, command: 0x48)     
+        var rv = UInt16(i2c.readByte(address, command: 0x47)) << 8
+        rv |= UInt16(i2c.readByte(address, command: 0x48))     
         return Int(rv)
     }
 
