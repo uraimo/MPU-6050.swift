@@ -14,7 +14,9 @@
 
 This is a library for MPU-6050 accelerometer and gyroscope based boards (a few different models are available from Adafruit, Sparkfun or other manufacturers).
 
-You'll be able to read via I2C the current accelerometer values along the X,Y,Z axis, read the current orientation of the gyroscope, check the value of the internal temperature sensor and turn on/off and reset the device.
+You'll be able to read via I2C the current accelerometer and gyroscope values along the X,Y,Z axis, check the value of the internal temperature sensor and turn on/off and reset the device.
+
+More information on how this data should be interpreted can be found in [this Sparkfun guide](https://www.sparkfun.com/pages/accel_gyro_guide).
 
 ## Hardware Details
 
