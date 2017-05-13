@@ -16,17 +16,14 @@ This is a library for MPU-6050 accelerometer and gyroscope based boards (a few d
 
 You'll be able to read via I2C the current accelerometer values along the X,Y,Z axis, read the current orientation of the gyroscope, check the value of the internal temperature sensor and turn on/off and reset the device.
 
+## Hardware Details
+
 These boards are normally powered with 3.3V and have an `ADD` pin that allows to select an alternative I2C address (put it HIGH for 0x69 instead of the default 0x68) for when you are using more that one of these devices on the same bus. Most of the times you'll connect this pin to `GND`.
 
-They also have an `INT` interrupt output pin that you can ignore and two additional `XDA` and `XCL` (or ASDA and ASCL on some boards) I2C pins to communicate with auxiliary devices controlled by the small internal processor (that has its own firmware but there is no documentation on how to alter it) of the MPU. Some boards could have additional pins, the only thing you need for this library is the I2C interface.
+They also have an `INT` interrupt output pin that you can ignore and two additional `XDA` and `XCL` (or ASDA and ASCL on some boards) I2C pins to communicate with auxiliary devices controlled by the small internal processor (that has its own firmware but there is no documentation on how to alter it) of the MPU.
 
-## Supported Boards
-
-Every board supported by [SwiftyGPIO](https://github.com/uraimo/SwiftyGPIO): RaspberryPis, BeagleBones, C.H.I.P., etc...
-
-To use this library, you'll need a Linux ARM board with Swift 3.x.
-
-The example below will use a RaspberryPi 2 board but you can easily modify the example to use one the other supported boards, a full working demo projects for the RaspberryPi2 is available in the `Examples` directory.
+Some boards could have additional pins, the only thing you need for this library is the I2C interface, connect it to your ARM board and you are good to go.
+ 
 
 ## Usage
 
@@ -68,6 +65,15 @@ All the `Int` values are unsigned 16 bit integers.
 The device also have self-check functionalities that verify that the internal micro mechanisms o this MEMS chip are working as expected, but those additional functions are not implemented at the moment.
 
 Even if your device is on a flat surface and stationary, you should always expect small variations of the accelerometer and gyroscope values. 
+ 
+## Supported Boards
+
+Every board supported by [SwiftyGPIO](https://github.com/uraimo/SwiftyGPIO): RaspberryPis, BeagleBones, C.H.I.P., etc...
+
+To use this library, you'll need a Linux ARM board with Swift 3.x.
+
+The example below will use a RaspberryPi 2 board but you can easily modify the example to use one the other supported boards, a full working demo projects for the RaspberryPi2 is available in the `Examples` directory.
+
 
 ## Installation
 
