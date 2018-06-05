@@ -4,7 +4,7 @@
 
 <p>
 <img src="https://img.shields.io/badge/os-linux-green.svg?style=flat" alt="Linux-only" />
-<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift3-compatible-4BC51D.svg?style=flat" alt="Swift 3 compatible" /></a>
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat" alt="Swift 4 compatible" /></a>
 <a href="https://raw.githubusercontent.com/uraimo/MPU-6050.swift/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
 </p>
  
@@ -72,7 +72,7 @@ Even if your device is on a flat surface and stationary, you should always expec
 
 Every board supported by [SwiftyGPIO](https://github.com/uraimo/SwiftyGPIO): RaspberryPis, BeagleBones, C.H.I.P., etc...
 
-To use this library, you'll need a Linux ARM board with Swift 3.x.
+To use this library, you'll need a Linux ARM board with Swift 3.x/4.x.
 
 The example below will use a RaspberryPi 2 board but you can easily modify the example to use one the other supported boards, a full working demo projects for the RaspberryPi2 is available in the `Examples` directory.
 
@@ -87,7 +87,7 @@ Once your board runs Swift, if your version support the Swift Package Manager, y
   let package = Package(
       name: "MyProject",
       dependencies: [
-        .Package(url: "https://github.com/uraimo/MPU-6050.swift.git", majorVersion: 1),
+        .Package(url: "https://github.com/uraimo/MPU-6050.swift.git", majorVersion: 2),
       ]
   ) 
 ```

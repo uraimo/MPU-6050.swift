@@ -2,9 +2,8 @@ import PackageDescription
 
 let package = Package(
     name: "TestMPU6050",
-    targets: [],
     dependencies: [
         .Package(url: "https://github.com/uraimo/MPU-6050.swift.git",
-                 majorVersion: 1)
+                 majorVersion: 2)
     ]
 )
