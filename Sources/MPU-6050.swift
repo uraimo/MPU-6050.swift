@@ -37,7 +37,7 @@ public class MPU6050{
 
     public var AccelX: Int {
         var rv = UInt16(i2c.readByte(address, command: 0x3B)) << 8
-        rv |= UInt16(i2c.readByte(address, command: 0x3B))  
+        rv |= UInt16(i2c.readByte(address, command: 0x3C))  
         return Int(rv)
     }
 
