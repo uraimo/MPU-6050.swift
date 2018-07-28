@@ -39,7 +39,7 @@ public class MPU6050{
         var rv = UInt16(i2c.readByte(address, command: 0x3B)) << 8
         rv |= UInt16(i2c.readByte(address, command: 0x3C))  
         if (rv >= 0x8000) {
-            return -(Int((65535 - rv) + 1))
+            return -(Int((UInt16.max - rv) + 1))
         } else {
             return Int(rv)
         }
@@ -49,7 +49,7 @@ public class MPU6050{
         var rv = UInt16(i2c.readByte(address, command: 0x3D)) << 8
         rv |= UInt16(i2c.readByte(address, command: 0x3E))  
         if (rv >= 0x8000) {
-            return -(Int((65535 - rv) + 1))
+            return -(Int((UInt16.max - rv) + 1))
         } else {
             return Int(rv)
         }
@@ -59,7 +59,7 @@ public class MPU6050{
         var rv = UInt16(i2c.readByte(address, command: 0x3F)) << 8
         rv |= UInt16(i2c.readByte(address, command: 0x40))     
         if (rv >= 0x8000) {
-            return -(Int((65535 - rv) + 1))
+            return -(Int((UInt16.max - rv) + 1))
         } else {
             return Int(rv)
         }
@@ -90,7 +90,7 @@ public class MPU6050{
         var rv = UInt16(i2c.readByte(address, command: 0x43)) << 8
         rv |= UInt16(i2c.readByte(address, command: 0x44))     
         if (rv >= 0x8000) {
-            return -(Int((65535 - rv) + 1))
+            return -(Int((UInt16.max - rv) + 1))
         } else {
             return Int(rv)
         }
@@ -100,7 +100,7 @@ public class MPU6050{
         var rv = UInt16(i2c.readByte(address, command: 0x45)) << 8
         rv |= UInt16(i2c.readByte(address, command: 0x46))  
         if (rv >= 0x8000) {
-            return -(Int((65535 - rv) + 1))
+            return -(Int((UInt16.max - rv) + 1))
         } else {
             return Int(rv)
         }
@@ -110,7 +110,7 @@ public class MPU6050{
         var rv = UInt16(i2c.readByte(address, command: 0x47)) << 8
         rv |= UInt16(i2c.readByte(address, command: 0x48))     
         if (rv >= 0x8000) {
-            return -(Int((65535 - rv) + 1))
+            return -(Int((UInt16.max - rv) + 1))
         } else {
             return Int(rv)
         }
